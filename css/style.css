@@ -162,3 +162,157 @@ footer {
     color: #888;
     transform: scale(1.1);
 }
+
+.sobremim-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/* SEÇÃO SUPERIOR: SOBRE MIM + FOTO*/
+
+
+.secao-topo {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.conteudo-sobremim-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px; /* espaço entre texto e foto */
+}
+
+/* coluna do texto */
+.coluna-texto {
+    flex: 1; 
+}
+
+/* coluna da foto */
+.coluna-foto {
+    flex-shrink: 0; 
+    width: 350px; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.foto-container-sobremim {
+    width: 300px; 
+    height: 400px; 
+    border-radius: 8px; 
+    overflow: hidden;
+    border: 4px solid #FFFFFF; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.foto-container-sobremim img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
+
+/* SEÇÃO INFERIOR: FORMAÇÃO E EXPERIÊNCIA */
+
+
+.secao-dados {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.conteudo-sobremim-dados {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px; 
+}
+
+.coluna-dados-formacao, .coluna-dados-experiencia {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* h2 colunas */
+.coluna-texto h2, 
+.coluna-dados-formacao h2, 
+.coluna-dados-experiencia h2 {
+    font-size: 32px; 
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+/* estilo para os parágrafos */
+.coluna-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ffffffcc;
+    margin-bottom: 20px;
+}
+
+/* estilo da lista */
+.coluna-dados-formacao ul, 
+.coluna-dados-experiencia ul {
+    list-style-type: none;
+    padding-left: 0; 
+    margin-bottom: 20px;
+}
+
+.coluna-dados-formacao ul > li, 
+.coluna-dados-experiencia ul > li {
+    font-size: 18px;
+    color: #ffffffcc;
+    line-height: 1.6;
+    padding-left: 20px; 
+    position: relative; 
+    margin-bottom: 15px; 
+}
+
+/* título em negrito */
+.coluna-dados-formacao strong, 
+.coluna-dados-experiencia strong {
+    color: #FFFFFF;
+    font-weight: 700;
+    display: inline; 
+}
+
+/*pontos principais */
+.coluna-dados-formacao ul > li::before, 
+.coluna-dados-experiencia ul > li::before {
+    content: '•'; 
+    color: #FFFFFF; 
+    font-weight: bold;
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+}
+
+/* Atividades*/
+.coluna-dados-experiencia ul ul { 
+    padding-left: 20px; 
+    margin-top: 5px; 
+    margin-bottom: 0;
+}
+
+.coluna-dados-experiencia ul ul li {
+    font-size: 18px; 
+    color: #ffffffcc;
+    line-height: 1.6;
+    padding-left: 15px; 
+    position: relative;
+    margin-bottom: 5px; 
+}
+
+/* Bullet points dos sub-itens (círculo vazado 'o') */
+.coluna-dados-experiencia ul ul li::before {
+    content: 'o'; 
+    color: #FFFFFF; 
+    font-size: 14px; 
+    line-height: 1.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

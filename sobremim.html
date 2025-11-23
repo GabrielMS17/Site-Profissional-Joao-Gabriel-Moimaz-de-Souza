@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>João Gabriel – Sobre Mim</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css"> 
+    <!-- fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- header -->
     <header>
+        <div class="logo">
+            <a href="index.html"><img src="/imgs/D (1).png" height="100px" width="100px"></a>
+        </div>
+
         <nav>
-            <a href="index.html">Página Inicial</a>
-            <a href="sobremim.html">Sobre mim</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="expformacao.html">Minha Formação</a>
-            <a href="contato.html">Contato</a>
+            <ul>
+                <li><a href="projetos.html">PROJETOS</a></li>
+                <li><a href="sobremim.html">SOBRE</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
         </nav>
+    </header>
+
+    <!-- seção principal -->
     <main>
-         <h1>Sobre Mim</h1>
+        
+        <!-- SEÇÃO SUPERIOR: SOBRE MIM + FOTO  -->
+        <section class="secao-topo">
+            <div class="sobremim-container">
+                <div class="conteudo-sobremim-topo">
+                    
+                    <!-- coluna 1: sobre mim -->
+                    <div class="coluna-texto">
+                        <h2>Sobre mim</h2>
+
+                        <p>
+                            Por enquanto, sou apenas um menino com grandes sonhos para o futuro, tanto profissionais quanto pessoais. 
+                            Desde pequeno, eu tinha uma curiosidade enorme sobre como eram feitos os jogos que eu jogava no videogame. 
+                            Na adolescência, comecei a acompanhar criadores de conteúdo relacionados a jogos e programação. 
+                            Hoje, curso Desenvolvimento de Software Multiplataforma e sou cada dia mais grato por tudo o que venho aprendendo.
+                        </p>
+                        <p>
+                            Sou bem calmo e sei lidar com situações em que me sinto pressionado. Costumo ser quieto, mas, quando fico 
+                            mais à vontade, acabo sendo bem falante e brincalhão. Tenho bastante criatividade, sou observador e 
+                            sempre tento usar essas qualidades ao meu favor.
+                        </p>
+                        <p>
+                            Gosto muito de passar tempo com minha família e amigos, e quando digo "família", incluo meu cachorro, 
+                            meu companheiro de sempre.
+                        </p>
+                    </div>
+
+                    <div class="coluna-foto">
+
+                        <div class="foto-container-sobremim">
+                            <img src="imgs/IMG_20240811_171339.jpg" alt="Foto minha com meu cachorro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO INFERIOR: FORMAÇÃO E EXPERIÊNCIA -->
+        <section class="secao-dados">
+            <div class="sobremim-container">
+                <div class="conteudo-sobremim-dados">
+                    
+                    <!-- coluna inferior 1: formação Acadêmica -->
+                    <div class="coluna-dados-formacao">
+                        <h2>Formação Acadêmica</h2>
+                        <ul>
+                            <li>
+                                <strong>Tecnólogo em Desenvolvimento de Software Multiplataforma</strong> 
+                                Faculdade de Tecnologia de São Paulo (FATEC-SP)<br> 
+                                Cursando (Agosto/2024 - Julho/2027)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- coluna inferior 2: experiência profissional -->
+                    <div class="coluna-dados-experiencia">
+                        <h2>Experiência Profissional</h2>
+                        <ul>
+                            <li>
+                                <strong>Estagiário de Validação de Sistemas</strong>
+                                Laboratório Cristália (Unidade II)<br>
+                                18 de Junho de 2025 - Presente
+                                <br>
+                                <strong>Principais Atividades:</strong>
+                                <ul>
+                                    <li>Elaboração de documentos técnicos como análises de risco, especificações funcionais, protocolos e relatórios de qualificação de operação e desempenho.</li>
+                                    <li>Condução de testes de validação de sistemas.</li>
+                                    <li>Suporte administrativo no sistema ERP SAP, incluindo a reinicialização de senhas e desbloqueio de contas de usuários.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- footer -->
+    <footer>
+        Desenvolvido por: João Gabriel Moimaz de Souza
+    </footer>
+
+</body>
+</html>
