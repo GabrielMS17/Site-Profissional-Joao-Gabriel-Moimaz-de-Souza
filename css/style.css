@@ -1,4 +1,4 @@
-/*  configurações gerais */
+/*  configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     font-size: 20px;
-    color: #ffffffcc; /* branco com transparência */
+    color: #ffffffcc;
     transition: 0.2s;
     letter-spacing: 1px;
 }
@@ -87,7 +87,7 @@ section {
     object-fit: cover;
 }
 
-/*  footer  */
+/*  footer  */
 footer {
     text-align: center;
     width: 100%;
@@ -120,8 +120,8 @@ footer {
 
 /* carrossel*/
 #meuCarrossel {
-    width: 800px;     
-    height: 415px;    
+    width: 800px;
+    height: 415px;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -129,7 +129,7 @@ footer {
 /* ajuste das imagens */
 #meuCarrossel img {
     width: 100%;
-    height: 415px;    /* mesmo height do carrossel */
+    height: 415px;
     object-fit: fill;
 }
 
@@ -139,7 +139,30 @@ footer {
     font-size: 18px;
     color: #ffffffcc;
 }
-/*ícone do github*/
+
+/*icones redes sociais*/
+.icones-sociais-container {
+    width: 100%; 
+    text-align: center; /* Centraliza os ícones */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Espaçamento entre os ícones */
+}
+
+/* estilo para todos os ícones sociais (instagram, gitHub, linkedin, etc) */
+.icones-sociais-container i {
+    font-size: 60px;
+    color: white;
+    transition: 0.3s;
+}
+
+.icones-sociais-container i:hover {
+    color: #888;
+    transform: scale(1.1);
+}
+
+
 .github-abaixo {
     width: 100%; 
     text-align: left; 
@@ -162,6 +185,7 @@ footer {
     color: #888;
     transform: scale(1.1);
 }
+
 
 .sobremim-container {
     max-width: 1200px;
@@ -306,7 +330,7 @@ footer {
     margin-bottom: 5px; 
 }
 
-/* Bullet points dos sub-itens (círculo vazado 'o') */
+/* Bullet points dos sub-itens */
 .coluna-dados-experiencia ul ul li::before {
     content: 'o'; 
     color: #FFFFFF; 
@@ -315,4 +339,228 @@ footer {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+/* seção de contato */
+.secao-contato {
+    display: block;
+    text-align: center;
+    padding: 100px 60px; 
+    min-height: 80vh; 
+}
+
+.titulo-contato {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 80px;
+    color: #FFFFFF;
+}
+
+/* estilo do formulário de contato*/
+.form-contato {
+    max-width: 600px;
+    margin: 40px auto 0; 
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-contato label {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ffffff33; 
+    border-radius: 8px;
+    background-color: #1a2035; 
+    color: #FFFFFF;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical; 
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: #888; 
+    outline: none;
+    box-shadow: 0 0 0 3px #ffffff1a; 
+}
+
+.form-contato textarea {
+    min-height: 150px;
+}
+
+.form-contato button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #070F26; 
+    background-color: #FFFFFF; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.form-contato button:hover {
+    background-color: #cccccc;
+    transform: translateY(-1px);
+}
+
+
+/* --- responsividade ---- */
+
+
+
+@media (max-width: 1024px) {
+    .imagem-projeto-container {
+        width: 550px; 
+    }
+}
+
+
+@media (max-width: 850px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+    
+    .principal-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .coluna-texto-principal { order: 2; }
+    .coluna-foto-principal { order: 1; }
+
+    .texto {
+        text-align: center;
+    }
+
+    .texto h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .texto p {
+        font-size: 18px;
+    }
+
+    .foto-container-lg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .conteudo-sobremim-topo {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .coluna-foto {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .foto-container-sobremim {
+        width: 250px;
+        height: 330px;
+    }
+
+    .coluna-texto h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .conteudo-sobremim-dados {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .coluna-dados-formacao, .coluna-dados-experiencia {
+        max-width: 100%;
+    }
+
+    .coluna-dados-formacao h2, .coluna-dados-experiencia h2 {
+        text-align: center;
+    }
+    
+    .conteudo-projeto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem-projeto-container {
+        width: 100%; 
+    }
+
+    .texto-menor {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .titulo-contato {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .texto h1 {
+        font-size: 28px;
+    }
+
+    .titulo-projeto {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .icones-sociais-container {
+        gap: 25px;
+    }
+    
+    .icones-sociais-container i {
+        font-size: 40px;
+    }
+    
+    footer {
+        font-size: 16px;
+        padding: 20px 0;
+    }
 }
