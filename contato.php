@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="projetos.html">PROJETOS</a></li>
                 <li><a href="sobremim.html">SOBRE</a></li>
-                <li><a href="contato.html">CONTATO</a></li>
+                <li><a href="contato.php">CONTATO</a></li>
             </ul>
         </nav>
     </header>
