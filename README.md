@@ -11,7 +11,6 @@ Estilização e layout: Bootstrap v4.5.2 (para Navbar e Carrossel) e CSS Media Q
 
 Design: Tema Escuro (#070F26), Fonte Inter, Ícones Font Awesome.
 
-Back-end apenas para enviar a mensagem: PHP.
 
 --Funcionalidades Implementadas--
 
