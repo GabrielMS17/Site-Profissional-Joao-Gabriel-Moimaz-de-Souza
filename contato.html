@@ -43,7 +43,7 @@
             </p>
 
             <!-- formulário-->
-            <form class="form-contato" action="contato.php" method="POST">
+            <form class="form-contato" id="form-contato" action="contato.php" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome Completo</label>
                     <input type="text" id="nome" name="nome" required placeholder="Seu nome">
@@ -61,39 +61,38 @@
                 
                 <button type="submit">Enviar Mensagem</button>
             </form>
-<?php
-// verifica se os dados do formulário foram enviados
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : 'Não Informado';
-    $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'Não Informado';
-    $mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : 'Não Informada';
+            <div class="popup-overlay" style="display: none;"></div>
 
-// pop-up mensagem de sucesso
-
-    echo '
-            <div class="popup-overlay"></div>
-
-                <div class="popup-sucesso">
+            <div class="popup-sucesso" style="display: none;">
                 <i class="fas fa-check-circle"></i>
                 <h2>Mensagem enviada!</h2>
-                <p>Obrigado pelo contato, '.$nome.'.</p>
+                <p>Obrigado pelo contato.</p>
                 <button onclick="fecharPopup()">Fechar</button>
             </div>
 
             <script>
+                const formulario = document.getElementById("form-contato");
+
+                formulario.addEventListener("submit", function(event) {
+                    event.preventDefault();
+
+                    // exibe o popup
+                    document.querySelector(".popup-sucesso").style.display = "block";
+                    document.querySelector(".popup-overlay").style.display = "block";
+
+
+                });
+
                 function fecharPopup() {
+                    // fecha apenas o popup
                     document.querySelector(".popup-sucesso").style.display = "none";
                     document.querySelector(".popup-overlay").style.display = "none";
-                    window.location.href = "contato.php";
+
+
                 }
             </script>
 
-            </body>
-            </html>';
-exit;
-}
-?>
 
             <!-- ícones redes sociais -->
             <div class="icones-sociais-container" style="margin-top: 80px;">
