@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Gabriel – Contato</title>
+    
+    <!-- foontes e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/logodosite.png">
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logodosite.png" height="100px" width="100px"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="projetos.html">PROJETOS</a></li>
+                <li><a href="sobremim.html">SOBRE</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        
+        <!-- seção contato -->
+        <section class="secao-contato">
+            <h1 class="titulo-contato">Entre em Contato</h1>
+
+            <p class="texto" style="max-width: 800px; margin: 0 auto 60px;">
+                Preencha o formulário abaixo para me enviar uma mensagem.
+            </p>
+
+            <!-- formulário-->
+            <form class="form-contato" action="contato.php" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem aqui..."></textarea>
+                </div>
+                
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+<?php
+// verifica se os dados do formulário foram enviados
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : 'Não Informado';
+    $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'Não Informado';
+    $mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : 'Não Informada';
+
+// pop-up mensagem de sucesso
+
+    echo '
+            <div class="popup-overlay"></div>
+
+                <div class="popup-sucesso">
+                <i class="fas fa-check-circle"></i>
+                <h2>Mensagem enviada!</h2>
+                <p>Obrigado pelo contato, '.$nome.'.</p>
+                <button onclick="fecharPopup()">Fechar</button>
+            </div>
+
+            <script>
+                function fecharPopup() {
+                    document.querySelector(".popup-sucesso").style.display = "none";
+                    document.querySelector(".popup-overlay").style.display = "none";
+                    window.location.href = "contato.php";
+                }
+            </script>
+
+            </body>
+            </html>';
+exit;
+}
+?>
+
+            <!-- ícones redes sociais -->
+            <div class="icones-sociais-container" style="margin-top: 80px;">
+                <!-- instagram -->
+                <a href="https://www.instagram.com/_jgabrielmsz" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- gitHub -->
+                <a href="https://github.com/GabrielMS17" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <!-- linkedin -->
+                <a href="https://www.linkedin.com/in/joão-gabriel-moimaz-de-souza-0962b92b3" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        Desenvolvido por: João Gabriel Moimaz de Souza
+    </footer>
+
+</body>
+
+</html>
